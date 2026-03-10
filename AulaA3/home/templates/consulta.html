@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2>Consultar Livro</h2>
+
+<form method="POST">
+{% csrf_token %}
+
+<input type="text" name="nome" placeholder="Nome do livro">
+
+<button type="submit">Buscar</button>
+
+</form>
+
+{% endblock %}

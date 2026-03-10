@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2>{{livro.titulo}}</h2>
+
+<p>Autor: {{livro.autor}}</p>
+<p>Editora: {{livro.editora}}</p>
+<p>Ano: {{livro.ano}}</p>
+<p>Páginas: {{livro.paginas}}</p>
+<p>Categoria: {{livro.categoria}}</p>
+<p>ISBN: {{livro.isbn}}</p>
+<p>Idioma: {{livro.idioma}}</p>
+<p>Descrição: {{livro.descricao}}</p>
+
+{% endblock %}

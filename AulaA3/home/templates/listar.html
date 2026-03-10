@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2>Lista de Livros</h2>
+
+{% for livro in livros %}
+
+<p>
+<a href="/detalhe/{{livro.id}}">{{livro.titulo}}</a>
+<a href="/excluir/{{livro.id}}">Excluir</a>
+</p>
+
+{% endfor %}
+
+{% endblock %}

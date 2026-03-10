@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2>Cadastrar Livro</h2>
+
+<form method="POST" onsubmit="return validarFormulario()">
+{% csrf_token %}
+
+<input type="text" id="titulo" name="titulo" placeholder="Título"><br>
+<input type="text" name="autor" placeholder="Autor"><br>
+<input type="text" name="editora" placeholder="Editora"><br>
+<input type="number" id="ano" name="ano" placeholder="Ano"><br>
+<input type="number" id="paginas" name="paginas" placeholder="Páginas"><br>
+<input type="text" name="categoria" placeholder="Categoria"><br>
+<input type="text" name="isbn" placeholder="ISBN"><br>
+<input type="text" name="idioma" placeholder="Idioma"><br>
+<textarea name="descricao" placeholder="Descrição"></textarea><br>
+<input type="text" name="cadastrado_por" placeholder="Seu Nome"><br>
+
+<button type="submit">Cadastrar</button>
+
+</form>
+
+<script src="/static/js/validacao.js"></script>
+
+{% endblock %}

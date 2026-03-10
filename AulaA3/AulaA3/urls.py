@@ -16,7 +16,17 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from home import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('home/', views.home),
+    path('', views.home, name='home'),
+    path('cadastrar/', views.cadastrar, name='cadastrar'),
+    path('consulta/', views.consulta, name='consulta'),
+    path('listar/', views.listar, name='listar'),
+    path('detalhe/<int:id>/', views.detalhe, name='detalhe'),
+    path('excluir/<int:id>/', views.excluir, name='excluir'),
+    path('sobre/', views.sobre, name='sobre'),
+    path('contato/', views.contato, name='contato'),
 ]
